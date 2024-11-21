@@ -1,13 +1,9 @@
-import { getStatOfCountry } from "../lib/helper";
 import { RootState } from "../redux/store";
 import { useSelector } from "react-redux";
 import StatCard from "./StatCard";
 
 const Statistics = () => {
-  const selectedCountry = useSelector(
-    (state: RootState) => state.selectedCountry
-  );
-  const stats = getStatOfCountry(selectedCountry.title);
+  const { stats } = useSelector((state: RootState) => state.selectedCountry);
   console.log({ stats });
   return (
     <div className=" flex flex-row justify-evenly py-14">

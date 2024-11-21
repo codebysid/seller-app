@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { countries } from "../lib/constants";
 import Icons, { IconName } from "./Icons";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { updateSelectedCountry } from "../redux/slice/selectedCountry";
+import {
+  updateSelectedCountry,
+  updateSelectedCountryData,
+} from "../redux/slice/selectedCountry";
+import { filterCountry } from "../lib/helper";
 
 const CountryDropDown = () => {
   const selectedCountry = useSelector(
@@ -18,6 +22,20 @@ const CountryDropDown = () => {
     dispatch(updateSelectedCountry({ title }));
     handleDropDownVisibility();
   };
+
+  useEffect(() => {
+    const selectedCountryData = filterCountry(selectedCountry.title);
+    if (selectedCountry) {
+      dispatch(
+        updateSelectedCountryData({
+          stats: selectedCountryData.stats,
+          salesDataByRegion: selectedCountryData.salesDataByRegion,
+          salesOverviewData: selectedCountryData.salesOverviewData,
+          title: selectedCountry.title,
+        })
+      );
+    }
+  }, [selectedCountry, dispatch]);
 
   return (
     <div className=" w-[178px]">

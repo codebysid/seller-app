@@ -8,18 +8,20 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { convertToDollar, getDataOfCountry } from "../../lib/helper";
+import { convertToDollar } from "../../lib/helper";
 import TooltipContent from "./ToolTipContent";
 import LegendContent from "./LegendContent";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 
 const SalesOverviewChart = () => {
-  const { title } = useSelector((state: RootState) => state.selectedCountry);
-  const data = getDataOfCountry(title);
+  const { salesOverviewData } = useSelector(
+    (state: RootState) => state.selectedCountry
+  );
+
   return (
     <ResponsiveContainer width="100%" height={280}>
-      <LineChart data={data}>
+      <LineChart data={salesOverviewData}>
         <CartesianGrid
           strokeDasharray="3 3"
           horizontal={false}

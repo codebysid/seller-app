@@ -8,42 +8,20 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Label from "./RadarLabel";
-
-const data = [
-  {
-    region: "Asia",
-    value: 2201,
-  },
-  {
-    region: "Europe",
-    value: 2865,
-  },
-  {
-    region: "Pacific",
-    value: 2475,
-  },
-  {
-    region: "Americans",
-    value: 1762,
-  },
-  {
-    region: "Middle Est",
-    value: 1749,
-  },
-  {
-    region: "Africa",
-    value: 1591,
-  },
-];
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const SalesRegionChart: React.FC = () => {
+  const { salesDataByRegion } = useSelector(
+    (state: RootState) => state.selectedCountry
+  );
   return (
     <ResponsiveContainer
       width="85%"
       height={280}
       className={" flex justify-center items-center"}
     >
-      <RadarChart data={data}>
+      <RadarChart data={salesDataByRegion}>
         <PolarGrid className=" fill-blue-8" />
         <PolarAngleAxis dataKey="region" className=" text-sbody-text" />
         <PolarRadiusAxis />

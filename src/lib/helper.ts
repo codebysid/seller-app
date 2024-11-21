@@ -1,21 +1,11 @@
 import { countryStat } from "./constants";
 
-function filterCountry(countryName: string) {
+export function filterCountry(countryName: string) {
   const countryData = countryStat.filter(
     (country) =>
       country.countryName.toLocaleLowerCase() == countryName.toLowerCase()
   );
-  return countryData;
-}
-
-export function getStatOfCountry(countryName: string) {
-  const countryData = filterCountry(countryName);
-  return countryData[0].stats;
-}
-
-export function getDataOfCountry(countryName: string) {
-  const countryData = filterCountry(countryName);
-  return countryData[0].data;
+  return countryData[0];
 }
 
 export function convertToDollar(amount: number) {

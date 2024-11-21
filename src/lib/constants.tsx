@@ -614,43 +614,6 @@ export const countries = [
 
 export const countryStat = [
   {
-    countryName: "india",
-    stats: [
-      {
-        title: "Total Income",
-        value: "33328.12",
-        lastMonthChange: "12.24%",
-      },
-      {
-        title: "Profit",
-        value: "8583.09",
-        lastMonthChange: "2.63",
-      },
-      {
-        title: "Total Views",
-        value: "52.234.32",
-        lastMonthChange: "1.46%",
-      },
-      {
-        title: "Conversion Rate",
-        value: "6.12%",
-        lastMonthChange: "8.75%",
-      },
-    ],
-    data: [
-      { month: "Apr 2023", revenue: 32000, target: 18000 },
-      { month: "May 2023", revenue: 1000, target: 20000 },
-      { month: "Jun 2023", revenue: 6000, target: 21000 },
-      { month: "Jul 2023", revenue: 44000, target: 19000 },
-      { month: "Aug 2023", revenue: 67000, target: 18000 },
-      { month: "Sep 2023", revenue: 11000, target: 20000 },
-      { month: "Oct 2023", revenue: 1000, target: 22000 },
-      { month: "Nov 2023", revenue: 111780, target: 20000 },
-      { month: "Dec 2023", revenue: 1000, target: 18000 },
-      { month: "Jan 2024", revenue: 19000, target: 22000 },
-    ],
-  },
-  {
     countryName: "usa",
     stats: [
       {
@@ -674,7 +637,7 @@ export const countryStat = [
         lastMonthChange: "8.75",
       },
     ],
-    data: [
+    salesOverviewData: [
       { month: "Apr 2023", revenue: 15000, target: 18000 },
       { month: "May 2023", revenue: 17000, target: 20000 },
       { month: "Jun 2023", revenue: 16000, target: 21000 },
@@ -686,43 +649,157 @@ export const countryStat = [
       { month: "Dec 2023", revenue: 17000, target: 18000 },
       { month: "Jan 2024", revenue: 19000, target: 22000 },
     ],
+    salesDataByRegion: [
+      {
+        region: "Asia",
+        value: 2201,
+      },
+      {
+        region: "Europe",
+        value: 2865,
+      },
+      {
+        region: "Pacific",
+        value: 2475,
+      },
+      {
+        region: "Americans",
+        value: 1762,
+      },
+      {
+        region: "Middle Est",
+        value: 1749,
+      },
+      {
+        region: "Africa",
+        value: 1591,
+      },
+    ],
   },
-
+  {
+    countryName: "india",
+    stats: [
+      {
+        title: "Total Income",
+        value: "933280.12",
+        lastMonthChange: "40%",
+      },
+      {
+        title: "Profit",
+        value: "858.09",
+        lastMonthChange: "15.63",
+      },
+      {
+        title: "Total Views",
+        value: "52.32",
+        lastMonthChange: "2.46%",
+      },
+      {
+        title: "Conversion Rate",
+        value: "10.12%",
+        lastMonthChange: "9.75%",
+      },
+    ],
+    salesOverviewData: [
+      { month: "Apr 2023", revenue: 32000, target: 18000 },
+      { month: "May 2023", revenue: 1000, target: 20000 },
+      { month: "Jun 2023", revenue: 6000, target: 21000 },
+      { month: "Jul 2023", revenue: 44000, target: 19000 },
+      { month: "Aug 2023", revenue: 67000, target: 18000 },
+      { month: "Sep 2023", revenue: 11000, target: 20000 },
+      { month: "Oct 2023", revenue: 1000, target: 22000 },
+      { month: "Nov 2023", revenue: 111780, target: 20000 },
+      { month: "Dec 2023", revenue: 1000, target: 18000 },
+      { month: "Jan 2024", revenue: 19000, target: 22000 },
+    ],
+    salesDataByRegion: [
+      {
+        region: "Asia",
+        value: 22001,
+      },
+      {
+        region: "Europe",
+        value: 265,
+      },
+      {
+        region: "Pacific",
+        value: 75,
+      },
+      {
+        region: "Americans",
+        value: 17200,
+      },
+      {
+        region: "Middle Est",
+        value: 17490,
+      },
+      {
+        region: "Africa",
+        value: 1431,
+      },
+    ],
+  },
   {
     countryName: "england",
     stats: [
       {
         title: "Total Income",
-        value: "33328.12",
-        lastMonthChange: "12.24%",
+        value: "333008.12",
+        lastMonthChange: "1.24%",
       },
       {
         title: "Profit",
-        value: "8583.09",
-        lastMonthChange: "2.63",
+        value: "858300.09",
+        lastMonthChange: "12.63",
       },
       {
         title: "Total Views",
-        value: "52.234.32",
-        lastMonthChange: "1.46&",
+        value: "5.2332",
+        lastMonthChange: "10.46&",
       },
       {
         title: "Conversion Rate",
-        value: "6.12%",
-        lastMonthChange: "8.75",
+        value: "16.12%",
+        lastMonthChange: "80.75",
       },
     ],
-    data: [
-      { month: "Apr 2023", revenue: 15000, target: 18000 },
-      { month: "May 2023", revenue: 17000, target: 20000 },
-      { month: "Jun 2023", revenue: 16000, target: 21000 },
-      { month: "Jul 2023", revenue: 18000, target: 19000 },
-      { month: "Aug 2023", revenue: 17000, target: 18000 },
-      { month: "Sep 2023", revenue: 14000, target: 20000 },
-      { month: "Oct 2023", revenue: 15000, target: 22000 },
-      { month: "Nov 2023", revenue: 15780, target: 20000 },
-      { month: "Dec 2023", revenue: 17000, target: 18000 },
-      { month: "Jan 2024", revenue: 19000, target: 22000 },
+    salesOverviewData: [
+      { month: "Apr 2023", revenue: 150870, target: 18000 },
+      { month: "May 2023", revenue: 1700, target: 2000 },
+      { month: "Jun 2023", revenue: 15400, target: 21000 },
+      { month: "Jul 2023", revenue: 18400, target: 19000 },
+      { month: "Aug 2023", revenue: 17900, target: 18000 },
+      { month: "Sep 2023", revenue: 9000, target: 20000 },
+      { month: "Oct 2023", revenue: 70500, target: 29000 },
+      { month: "Nov 2023", revenue: 43780, target: 28000 },
+      { month: "Dec 2023", revenue: 71000, target: 100000 },
+      { month: "Jan 2024", revenue: 12000, target: 220001 },
+    ],
+    salesDataByRegion: [
+      {
+        region: "Asia",
+        value: 221,
+      },
+      {
+        region: "Europe",
+        value: 265,
+      },
+      {
+        region: "Pacific",
+        value: 24750,
+      },
+      {
+        region: "Americans",
+        value: 1162,
+      },
+      {
+        region: "Middle Est",
+        value: 9749,
+      },
+      {
+        region: "Africa",
+        value: 5591,
+      },
     ],
   },
 ];
