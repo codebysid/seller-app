@@ -614,31 +614,6 @@ export const countries = [
 
 export const countryStat = [
   {
-    countryName: "usa",
-    stats: [
-      {
-        title: "Total Income",
-        value: "33328.12",
-        lastMonthChange: "12.24%",
-      },
-      {
-        title: "Profit",
-        value: "8583.09",
-        lastMonthChange: "2.63",
-      },
-      {
-        title: "Total Views",
-        value: "52.234.32",
-        lastMonthChange: "1.46%",
-      },
-      {
-        title: "Conversion Rate",
-        value: "6.12%",
-        lastMonthChange: "8.75",
-      },
-    ],
-  },
-  {
     countryName: "india",
     stats: [
       {
@@ -662,7 +637,57 @@ export const countryStat = [
         lastMonthChange: "8.75%",
       },
     ],
+    data: [
+      { month: "Apr 2023", revenue: 32000, target: 18000 },
+      { month: "May 2023", revenue: 1000, target: 20000 },
+      { month: "Jun 2023", revenue: 6000, target: 21000 },
+      { month: "Jul 2023", revenue: 44000, target: 19000 },
+      { month: "Aug 2023", revenue: 67000, target: 18000 },
+      { month: "Sep 2023", revenue: 11000, target: 20000 },
+      { month: "Oct 2023", revenue: 1000, target: 22000 },
+      { month: "Nov 2023", revenue: 111780, target: 20000 },
+      { month: "Dec 2023", revenue: 1000, target: 18000 },
+      { month: "Jan 2024", revenue: 19000, target: 22000 },
+    ],
   },
+  {
+    countryName: "usa",
+    stats: [
+      {
+        title: "Total Income",
+        value: "33328.12",
+        lastMonthChange: "12.24%",
+      },
+      {
+        title: "Profit",
+        value: "8583.09",
+        lastMonthChange: "2.63",
+      },
+      {
+        title: "Total Views",
+        value: "52.234.32",
+        lastMonthChange: "1.46%",
+      },
+      {
+        title: "Conversion Rate",
+        value: "6.12%",
+        lastMonthChange: "8.75",
+      },
+    ],
+    data: [
+      { month: "Apr 2023", revenue: 15000, target: 18000 },
+      { month: "May 2023", revenue: 17000, target: 20000 },
+      { month: "Jun 2023", revenue: 16000, target: 21000 },
+      { month: "Jul 2023", revenue: 18000, target: 19000 },
+      { month: "Aug 2023", revenue: 17000, target: 18000 },
+      { month: "Sep 2023", revenue: 14000, target: 20000 },
+      { month: "Oct 2023", revenue: 15000, target: 22000 },
+      { month: "Nov 2023", revenue: 15780, target: 20000 },
+      { month: "Dec 2023", revenue: 17000, target: 18000 },
+      { month: "Jan 2024", revenue: 19000, target: 22000 },
+    ],
+  },
+
   {
     countryName: "england",
     stats: [
@@ -686,6 +711,18 @@ export const countryStat = [
         value: "6.12%",
         lastMonthChange: "8.75",
       },
+    ],
+    data: [
+      { month: "Apr 2023", revenue: 15000, target: 18000 },
+      { month: "May 2023", revenue: 17000, target: 20000 },
+      { month: "Jun 2023", revenue: 16000, target: 21000 },
+      { month: "Jul 2023", revenue: 18000, target: 19000 },
+      { month: "Aug 2023", revenue: 17000, target: 18000 },
+      { month: "Sep 2023", revenue: 14000, target: 20000 },
+      { month: "Oct 2023", revenue: 15000, target: 22000 },
+      { month: "Nov 2023", revenue: 15780, target: 20000 },
+      { month: "Dec 2023", revenue: 17000, target: 18000 },
+      { month: "Jan 2024", revenue: 19000, target: 22000 },
     ],
   },
 ];

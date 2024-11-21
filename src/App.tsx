@@ -2,7 +2,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import TopBar from "./components/TopBar";
 import Statistics from "./components/Statistics";
-import SalesOverviewChart from "./components/graph/SalesOverviewChart";
+import SalesOverview from "./components/graph/SalesOverview";
+import SalesRegion from "./components/graph/SalesRegion";
 
 function App() {
   return (
@@ -13,10 +14,16 @@ function App() {
       <div className=" fixed top-0 left-0 w-full">
         <TopBar />
       </div>
-      <div className=" bg-blue-4 fixed top-16 left-48 w-full h-full">
+      <div className=" bg-blue-4 pl-48 pt-16 h-full flex flex-col">
         <Statistics />
-        <SalesOverviewChart />
-        {/* <SalesOverviewChart2 /> */}
+        <div className="w-[96%] grid grid-cols-3 gap-4 pl-4">
+          <div className=" col-span-2">
+            <SalesOverview />
+          </div>
+          <div className=" col-span-1">
+            <SalesRegion />
+          </div>
+        </div>
       </div>
     </div>
   );

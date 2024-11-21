@@ -32,7 +32,7 @@ const CountryDropDown = () => {
         <Icons name="dropDownIcon" />
       </div>
 
-      <div className="absolute top-13 left-[83.2%] z-20 bg-black-16">
+      <div className="absolute top-13 left-[83.2%] z-50 bg-black-16">
         {isOpen &&
           countries.map((country) => {
             return (

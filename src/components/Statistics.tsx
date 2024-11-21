@@ -8,9 +8,9 @@ const Statistics = () => {
     (state: RootState) => state.selectedCountry
   );
   const stats = getStatOfCountry(selectedCountry.title);
-  console.log(stats);
+  console.log({ stats });
   return (
-    <div className=" flex flex-row gap-10 pl-14 pt-16">
+    <div className=" flex flex-row justify-evenly py-14">
       {stats.map((stat, key) => {
         return (
           <StatCard

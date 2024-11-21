@@ -8,7 +8,6 @@ const LegendContent = ({ payload }: LegendProps) => {
     <ul className="flex space-x-4">
       {payload &&
         payload.map((entry, index) => {
-          console.log(entry, payload);
           return (
             <li key={`item-${index}`} className="flex items-center">
               <div
@@ -18,7 +17,7 @@ const LegendContent = ({ payload }: LegendProps) => {
               <span className="text-black-60 text-body-text">
                 {entry.value}
               </span>
-              <span>{totalRevenue}</span>
+              {/* <span>{totalRevenue}</span> */}
             </li>
           );
         })}

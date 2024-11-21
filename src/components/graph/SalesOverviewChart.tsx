@@ -7,28 +7,18 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  TooltipProps,
 } from "recharts";
-import { convertToDollar } from "../../lib/helper";
+import { convertToDollar, getDataOfCountry } from "../../lib/helper";
 import TooltipContent from "./ToolTipContent";
 import LegendContent from "./LegendContent";
-
-const data = [
-  { month: "Apr 2023", revenue: 15000, target: 18000 },
-  { month: "May 2023", revenue: 17000, target: 20000 },
-  { month: "Jun 2023", revenue: 16000, target: 21000 },
-  { month: "Jul 2023", revenue: 18000, target: 19000 },
-  { month: "Aug 2023", revenue: 17000, target: 18000 },
-  { month: "Sep 2023", revenue: 14000, target: 20000 },
-  { month: "Oct 2023", revenue: 15000, target: 22000 },
-  { month: "Nov 2023", revenue: 15780, target: 20000 },
-  { month: "Dec 2023", revenue: 17000, target: 18000 },
-  { month: "Jan 2024", revenue: 19000, target: 22000 },
-];
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const SalesOverviewChart = () => {
+  const { title } = useSelector((state: RootState) => state.selectedCountry);
+  const data = getDataOfCountry(title);
   return (
-    <ResponsiveContainer width="80%" height={500}>
+    <ResponsiveContainer width="100%" height={280}>
       <LineChart data={data}>
         <CartesianGrid
           strokeDasharray="3 3"
@@ -50,12 +40,15 @@ const SalesOverviewChart = () => {
         />
         <Tooltip content={<TooltipContent />} />
 
-        {/* Legend */}
         <Legend
           content={<LegendContent />}
           verticalAlign="top"
           align="right"
-          // wrapperStyle={{ paddingBottom: 10 }}
+          wrapperStyle={{
+            display: "flex",
+            justifyContent: "end",
+            paddingBottom: "40px",
+          }}
         />
 
         <Line
