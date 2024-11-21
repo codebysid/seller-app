@@ -1,6 +1,6 @@
 import { iconsLib } from "../lib/constants";
 
-type IconName = keyof typeof iconsLib;
+export type IconName = keyof typeof iconsLib;
 
 interface IIcons {
   name: IconName;

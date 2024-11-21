@@ -1,35 +1,21 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import { countries } from "../lib/constants";
-import Icons from "./Icons";
+import Icons, { IconName } from "./Icons";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { updateSelectedCountry } from "../redux/slice/selectedCountry";
 
 const CountryDropDown = () => {
-  const [dropDownState, setDropDownState] = useState<{
-    visible: boolean;
-    selectedOption: { title: string; flag: ReactNode };
-  }>({
-    visible: false,
-    selectedOption: { title: "", flag: "" },
-  });
+  const selectedCountry = useSelector(
+    (state: RootState) => state.selectedCountry
+  );
+  const dispatch = useDispatch();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleDropDownVisibility = () =>
-    setDropDownState((prev) =>
-      prev.visible
-        ? { ...prev, visible: !prev.visible }
-        : {
-            visible: !prev.visible,
-            selectedOption: dropDownState.selectedOption,
-          }
-    );
+  const handleDropDownVisibility = () => setIsOpen((prev: boolean) => !prev);
 
-  const handleSelectedOption = (title: string, flag: ReactNode) => {
-    setDropDownState((prev) =>
-      prev
-        ? { ...prev, selectedOption: { title, flag } }
-        : {
-            visible: dropDownState.visible,
-            selectedOption: { title, flag },
-          }
-    );
+  const handleSelectedOption = (title: string) => {
+    dispatch(updateSelectedCountry({ title }));
     handleDropDownVisibility();
   };
 
@@ -40,29 +26,28 @@ const CountryDropDown = () => {
         className=" bg-black-16 flex flex-row items-center justify-between w-full h-[42px] rounded-full px-1 cursor-pointer"
       >
         <div className="flex flex-row items-center gap-2 z-30 ">
-          {dropDownState.selectedOption.flag || <Icons name="usaFlag" />}
-          <p>{dropDownState.selectedOption.title || "USA"}</p>
+          {<Icons name={selectedCountry.title as IconName} />}
+          <p>{selectedCountry.title.toUpperCase()}</p>
         </div>
         <Icons name="dropDownIcon" />
       </div>
+
       <div className="absolute top-13 left-[83.2%] z-20 bg-black-16">
-        {dropDownState.visible &&
+        {isOpen &&
           countries.map((country) => {
             return (
               <div
                 key={country.id}
-                onClick={() =>
-                  handleSelectedOption(country.title, country.flag)
-                }
+                onClick={() => handleSelectedOption(country.title)}
                 className="cursor-pointer flex flex-row items-center w-[170px] p-2 hover:bg-white-60"
               >
                 {country.flag}
-                <p>{country.title}</p>
+                <p>{country.title.toUpperCase()}</p>
               </div>
             );
           })}
       </div>
-      {dropDownState.visible && (
+      {isOpen && (
         <div
           className=" z-10 fixed left-0 top-0 h-screen w-screen cursor-pointer"
           onClick={handleDropDownVisibility}

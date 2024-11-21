@@ -1,7 +1,8 @@
-import { Outlet } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TopBar from "./components/TopBar";
+import Statistics from "./components/Statistics";
+import SalesOverviewChart from "./components/graph/SalesOverviewChart";
 
 function App() {
   return (
@@ -12,7 +13,11 @@ function App() {
       <div className=" fixed top-0 left-0 w-full">
         <TopBar />
       </div>
-      <Outlet />
+      <div className=" bg-blue-4 fixed top-16 left-48 w-full h-full">
+        <Statistics />
+        <SalesOverviewChart />
+        {/* <SalesOverviewChart2 /> */}
+      </div>
     </div>
   );
 }
