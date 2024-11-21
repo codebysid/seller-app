@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      white: "rgba(33, 33, 33)",
+      white: "#ffffff",
       "white-60": "rgba(255, 255, 255, 0.6)",
       "white-20": "rgba(255, 255, 255, 0.2)",
       "white-16": "rgba(255, 255, 255, 0.16)",

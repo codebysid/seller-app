@@ -1,11 +1,14 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { NavItemType } from "../lib/constants";
+import { useEffect } from "react";
 
 const NavItem = ({ title, icon, id, route }: NavItemType) => {
   const router = useNavigate();
   const { pathname } = useLocation();
   const handleNavRoute = () => router(route);
-
+  useEffect(() => {
+    if (pathname == "/") router("/dashboard");
+  }, [pathname]);
   return (
     <div
       onClick={handleNavRoute}
