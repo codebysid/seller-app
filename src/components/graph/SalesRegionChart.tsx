@@ -4,7 +4,6 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
 import Label from "./RadarLabel";
@@ -22,9 +21,8 @@ const SalesRegionChart: React.FC = () => {
       className={" flex justify-center items-center"}
     >
       <RadarChart data={salesDataByRegion}>
-        <PolarGrid className=" fill-blue/8" />
+        <PolarGrid className=" fill-blue opacity-5" />
         <PolarAngleAxis dataKey="region" className=" text-sbody-text" />
-        <PolarRadiusAxis />
         <Radar
           dataKey="value"
           dot={{ r: 5, className: "fill-blue border-white" }}

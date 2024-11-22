@@ -5,7 +5,9 @@ import { RootState } from "../redux/store";
 import { toggleTheme } from "../redux/slice/theme";
 
 const DarkModeSwitch = () => {
-  const { isCompactMode } = useSelector((state: RootState) => state);
+  const { isCompactMode } = useSelector(
+    (state: RootState) => state.isCompactMode
+  );
   const dispatch = useDispatch();
   const [isChecked, setIsChecked] = useState<boolean>(false);
 

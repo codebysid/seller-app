@@ -24,7 +24,7 @@ const UserStatsGauge = () => {
 
   return (
     <div className="relative h-[280px]">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%">
         <PieChart>
           <Pie
             data={chartData}
@@ -40,7 +40,7 @@ const UserStatsGauge = () => {
         </PieChart>
       </ResponsiveContainer>
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center">
+      <div className="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center">
         {theme.dark ? (
           <Icons name="userGaugeDarkIcon" />
         ) : (

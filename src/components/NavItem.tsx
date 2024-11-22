@@ -20,10 +20,10 @@ const NavItem = ({ title, icon, id, route }: NavItemType) => {
   return (
     <div
       onClick={handleNavRoute}
-      className={`cursor-pointer group flex flex-row items-center gap-4 text-textColor/60 hover:text-textColor
-     rounded-md  ${isCompactMode ? "p-2 ml-1" : "py-1 px-3"} w-max ${
+      className={` transition-all duration-150 cursor-pointer group flex flex-row items-center gap-4 text-textColor/60 hover:text-textColor
+     rounded-md ${isCompactMode ? "p-2 ml-2" : "py-1 px-3"} w-max ${
         pathname.includes(title.toLocaleLowerCase().trim()) &&
-        `text-blue bg-blue/20`
+        `text-blue/100 bg-blue/20`
       }`}
     >
       {icon}

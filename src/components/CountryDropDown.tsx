@@ -40,10 +40,6 @@ const CountryDropDown = () => {
     }
   }, [selectedCountry, dispatch]);
 
-  useEffect(() => {
-    console.log({ selectedCountry });
-  }, [selectedCountry]);
-
   return (
     <div className=" w-[178px]">
       <div
@@ -57,7 +53,7 @@ const CountryDropDown = () => {
         <Icons name="dropDownIcon" />
       </div>
 
-      <div className="absolute top-13 left-[83.2%] z-50 bg-black/10">
+      <div className="absolute lg:top-13 lg:left-[83.2%] z-50 bg-black/10">
         {isOpen &&
           countries.map((country) => {
             return (

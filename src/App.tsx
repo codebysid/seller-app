@@ -23,19 +23,20 @@ function App() {
       </div>
       <div
         className={` bg-layoutBg ${
-          isCompactMode.isCompactMode ? `pl-5` : `pl-48`
-        } pt-28 h-full flex flex-col gap-10 pb-10`}
+          isCompactMode.isCompactMode ? `pl-24 lg:pl-5` : `pl-48`
+        } pt-28 h-full flex flex-col gap-5 pb-10`}
       >
         <Statistics />
-        <div className="w-[96%] grid grid-cols-3 gap-4 pl-4">
-          <div className=" col-span-2">
+        <div className="w-[96%] lg:grid lg:grid-cols-3 flex flex-col gap-4 pr-4 lg:pl-4">
+          <div className=" lg:col-span-2">
             <SalesOverview />
           </div>
-          <div className=" col-span-1">
+          <div className=" lg:col-span-1">
             <SalesRegion />
           </div>
         </div>
-        <div className="w-[96%] grid grid-cols-3 gap-4 pl-4">
+
+        <div className="w-[96%] lg:grid lg:grid-cols-3 flex flex-col gap-4 pr-4 lg:pl-4">
           <div className=" col-span-1">
             <UserStatsOverview />
           </div>

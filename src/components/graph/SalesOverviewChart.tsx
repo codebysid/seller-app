@@ -24,6 +24,7 @@ const SalesOverviewChart = () => {
       <LineChart data={salesOverviewData}>
         <CartesianGrid
           strokeDasharray="3 3"
+          strokeOpacity={0.2}
           horizontal={false}
           verticalFill={[
             "rgba(105, 111, 251, 0.12)",

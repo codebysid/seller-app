@@ -1,4 +1,4 @@
-import { convertToDollar } from "../lib/helper";
+import { convertToDollar, convertToPercentage } from "../lib/helper";
 import Icons, { IconName } from "./Icons";
 import ProgressBar from "./ProgressBar";
 import TableCheckBox from "./TableCheckBox";
@@ -28,7 +28,7 @@ const IntegrationRow = ({ rate, title, type, profit }: IIntegrationRow) => {
         </td>
         <td className=" flex flex-row items-center gap-2">
           <ProgressBar max={100} value={rate} />
-          <p>{rate}</p>
+          <p>{convertToPercentage(Number(rate), 100)}</p>
         </td>
         <td className="px-2 py-4">
           <p>{convertToDollar(Number(profit))}</p>

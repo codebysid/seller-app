@@ -15,12 +15,12 @@ const Navbar = () => {
 
   return (
     <div
-      className={`min-h-screen border-r border-borderColor py-4 w-max ${
+      className={` transition-all duration-500 min-h-screen border-r border-borderColor py-4 w-max ${
         isCompactMode ? `px-1` : `px-5`
       }`}
     >
       <div
-        className={` flex flex-row items-center gap-4 ${
+        className={` flex flex-row items-center ${
           isCompactMode ? ` gap-0 p-0 pb-5` : `gap-4 pb-5 pl-2`
         }`}
       >

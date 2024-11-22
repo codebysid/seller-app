@@ -28,7 +28,3 @@
   --black: 0, 0, 0;
   --blue: 105, 111, 251;
 }
-
-.tooltip-container {
-  @apply bg-black;
-}

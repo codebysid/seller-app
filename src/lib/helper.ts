@@ -13,3 +13,8 @@ export function convertToDollar(amount: number) {
     currency: "USD",
   }).format(amount);
 }
+
+export function convertToPercentage(value: number, wrt: number) {
+  const inPercentage = (value / wrt) * 100;
+  return `${inPercentage}%`;
+}
