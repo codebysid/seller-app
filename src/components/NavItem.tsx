@@ -27,8 +27,8 @@ const NavItem = ({ title, icon, route }: INavItem) => {
       onClick={handleNavRoute}
       className={` transition-all duration-150 cursor-pointer group flex flex-row items-center gap-4 text-textColor/60 hover:text-textColor
      rounded-md ${isCompactMode ? "p-2 ml-2" : "py-1 px-3"} w-max ${
-        pathname.includes(title.toLocaleLowerCase().trim()) &&
-        `text-blue/100 bg-blue/20`
+        pathname.includes(title.toLowerCase().trim()) &&
+        `text-[rgba(var(--blue))] bg-blue/20`
       }`}
     >
       {icon}
