@@ -2,8 +2,7 @@ import { countryStat } from "./constants";
 
 export function filterCountry(countryName: string) {
   const countryData = countryStat.filter(
-    (country) =>
-      country.countryName.toLocaleLowerCase() == countryName.toLowerCase()
+    (country) => country.countryName.toLowerCase() == countryName.toLowerCase()
   );
   return countryData[0];
 }

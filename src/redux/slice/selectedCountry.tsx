@@ -5,6 +5,11 @@ interface IInitialState {
   stats: { title: string; value: string; lastMonthChange: string }[];
   salesOverviewData: { month: string; revenue: number; target: number }[];
   salesDataByRegion: { region: string; value: number }[];
+  registeredUserData: {
+    totalUsers: number;
+    premiumUsers: number;
+    basicUsers: number;
+  };
 }
 
 const initialState: IInitialState = {
@@ -69,6 +74,11 @@ const initialState: IInitialState = {
       value: 1591,
     },
   ],
+  registeredUserData: {
+    totalUsers: 3201,
+    premiumUsers: 2804,
+    basicUsers: 397,
+  },
 };
 
 export const selectedCountrySlice = createSlice({
@@ -85,10 +95,16 @@ export const selectedCountrySlice = createSlice({
       state,
       action: PayloadAction<IInitialState>
     ) => {
-      const { stats, salesDataByRegion, salesOverviewData } = action.payload;
-      state.stats = stats;
-      state.salesOverviewData = salesOverviewData;
-      state.salesDataByRegion = salesDataByRegion;
+      const {
+        stats,
+        salesDataByRegion,
+        salesOverviewData,
+        registeredUserData,
+      } = action.payload;
+      if (stats) state.stats = stats;
+      if (salesOverviewData) state.salesOverviewData = salesOverviewData;
+      if (salesDataByRegion) state.salesDataByRegion = salesDataByRegion;
+      if (registeredUserData) state.registeredUserData = registeredUserData;
     },
   },
 });

@@ -26,16 +26,22 @@ const CountryDropDown = () => {
   useEffect(() => {
     const selectedCountryData = filterCountry(selectedCountry.title);
     if (selectedCountry) {
+      console.log({ selectedCountry });
       dispatch(
         updateSelectedCountryData({
           stats: selectedCountryData.stats,
           salesDataByRegion: selectedCountryData.salesDataByRegion,
           salesOverviewData: selectedCountryData.salesOverviewData,
           title: selectedCountry.title,
+          registeredUserData: selectedCountryData.registeredUserData,
         })
       );
     }
   }, [selectedCountry, dispatch]);
+
+  useEffect(() => {
+    console.log({ selectedCountry });
+  }, [selectedCountry]);
 
   return (
     <div className=" w-[178px]">

@@ -1,7 +1,6 @@
 import { LabelProps } from "recharts";
 
 const Label = ({ cx, cy, x, y, value, angle }: LabelProps) => {
-  console.log({ cx, cy, value });
   if (!cx || !cy || !x || !y || !angle) return;
   const radius = 120;
   const labelX = Number(cx) + radius * Math.cos((-angle * Math.PI) / 180);

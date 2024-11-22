@@ -12,7 +12,7 @@ const NavItem = ({ title, icon, id, route }: NavItemType) => {
   return (
     <div
       onClick={handleNavRoute}
-      className={`group flex flex-row items-center gap-4 text-black-60 hover:text-black
+      className={`cursor-pointer group flex flex-row items-center gap-4 text-black-60 hover:text-black
      rounded-md py-1 px-3 ${
        pathname.includes(title.toLocaleLowerCase().trim()) &&
        `text-blue bg-blue-20`

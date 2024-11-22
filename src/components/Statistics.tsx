@@ -4,9 +4,8 @@ import StatCard from "./StatCard";
 
 const Statistics = () => {
   const { stats } = useSelector((state: RootState) => state.selectedCountry);
-  console.log({ stats });
   return (
-    <div className=" flex flex-row justify-evenly py-14">
+    <div className=" flex flex-row justify-evenly">
       {stats.map((stat, key) => {
         return (
           <StatCard
