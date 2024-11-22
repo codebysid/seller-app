@@ -42,12 +42,15 @@ const CountryDropDown = () => {
           integrations: selectedCountryData.integrations,
         })
       );
-      saveToLocalStorage(JSON.stringify(selectedCountryData));
+      saveToLocalStorage(
+        "selectedCountry",
+        JSON.stringify(selectedCountryData)
+      );
     }
   }, [selectedCountry, dispatch]);
 
   return (
-    <div className=" w-[178px]">
+    <div className="relative w-[178px]">
       <div
         onClick={handleDropDownVisibility}
         className=" bg-black/10 flex flex-row items-center justify-between w-full h-[42px] rounded-full px-1 cursor-pointer"
@@ -59,7 +62,7 @@ const CountryDropDown = () => {
         <Icons name="dropDownIcon" />
       </div>
 
-      <div className="absolute lg:top-13 lg:left-[83.2%] z-50 bg-black/10">
+      <div className="absolute top-13 lg:left-[1%] z-50 bg-black/10">
         {isOpen &&
           countries.map((country) => {
             return (

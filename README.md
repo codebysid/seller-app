@@ -6,6 +6,8 @@
 
 ⭐ Local Storage data persistence (Bonus feature)
 
+⭐ Theme is default persisted using local storage. If not present then it defaults to system theme (Bonus feature)
+
 ⭐ Dynamic Data rendering for countries
 
 ⭐ You can save/copy it to your own library in Spotify as well

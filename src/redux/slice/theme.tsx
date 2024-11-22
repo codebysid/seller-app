@@ -1,11 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getLocalStorage } from "../../lib/helper";
 
 interface ITheme {
   dark: boolean;
 }
 
+const isSystemDarkMode = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+
+const userPreferenceMode = getLocalStorage("darkMode");
+
+const parsedUserPreferenceMode =
+  userPreferenceMode && JSON.parse(userPreferenceMode);
+
 const initialState: ITheme = {
-  dark: false,
+  dark: parsedUserPreferenceMode?.dark ?? isSystemDarkMode ?? false,
 };
 
 const theme = createSlice({

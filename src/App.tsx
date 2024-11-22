@@ -15,6 +15,7 @@ import { RootState } from "./redux/store";
 
 function App() {
   const { isCompactMode, theme } = useSelector((state: RootState) => state);
+
   return (
     <div
       className={`font-roboto ${theme.dark ? `dark` : `light`} text-textColor`}

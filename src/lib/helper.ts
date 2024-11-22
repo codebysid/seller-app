@@ -19,8 +19,8 @@ export function convertToPercentage(value: number, wrt: number) {
   return `${inPercentage}%`;
 }
 
-export function saveToLocalStorage(data: string) {
-  localStorage.setItem("selectedCountry", data);
+export function saveToLocalStorage(key: string, data: string) {
+  localStorage.setItem(key, data);
   return true;
 }
 
