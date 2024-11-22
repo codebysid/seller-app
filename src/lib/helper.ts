@@ -2,7 +2,7 @@ import { countryStat } from "./constants";
 
 export function filterCountry(countryName: string) {
   const countryData = countryStat.filter(
-    (country) => country.countryName.toLowerCase() == countryName.toLowerCase()
+    (country) => country?.title?.toLowerCase() == countryName?.toLowerCase()
   );
   return countryData[0];
 }
@@ -17,4 +17,15 @@ export function convertToDollar(amount: number) {
 export function convertToPercentage(value: number, wrt: number) {
   const inPercentage = (value / wrt) * 100;
   return `${inPercentage}%`;
+}
+
+export function saveToLocalStorage(data: string) {
+  localStorage.setItem("selectedCountry", data);
+  return true;
+}
+
+export function getLocalStorage(key: string) {
+  const item = localStorage.getItem(key);
+  if (item) return item;
+  return undefined;
 }

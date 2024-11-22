@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { getLocalStorage } from "../../lib/helper";
 
 interface IInitialState {
   title: string;
@@ -19,7 +20,10 @@ interface IInitialState {
   }[];
 }
 
-const initialState: IInitialState = {
+const cacheStorage = getLocalStorage("selectedCountry");
+const parseCachedStorage = cacheStorage && JSON.parse(cacheStorage);
+
+const initialState: IInitialState = parseCachedStorage || {
   title: "usa",
   stats: [
     {

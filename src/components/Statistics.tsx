@@ -5,6 +5,7 @@ import { convertToDollar, convertToPercentage } from "../lib/helper";
 
 const Statistics = () => {
   const { stats } = useSelector((state: RootState) => state.selectedCountry);
+
   return (
     <div className=" flex flex-col gap-4 lg:gap-0 lg:flex-row justify-evenly">
       {stats.map((stat, key) => {

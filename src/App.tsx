@@ -1,11 +1,15 @@
+import { lazy } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import TopBar from "./components/TopBar";
-import Statistics from "./components/Statistics";
-import SalesOverview from "./components/graph/SalesOverview";
-import SalesRegion from "./components/graph/SalesRegion";
-import UserStatsOverview from "./components/graph/UserStatsOverview";
-import Integrations from "./components/Integrations";
+const Navbar = lazy(() => import("./components/Navbar"));
+const TopBar = lazy(() => import("./components/TopBar"));
+const Statistics = lazy(() => import("./components/Statistics"));
+const SalesOverview = lazy(() => import("./components/graph/SalesOverview"));
+const SalesRegion = lazy(() => import("./components/graph/SalesRegion"));
+const UserStatsOverview = lazy(
+  () => import("./components/graph/UserStatsOverview")
+);
+const Integrations = lazy(() => import("./components/Integrations"));
+
 import { useSelector } from "react-redux";
 import { RootState } from "./redux/store";
 

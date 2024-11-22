@@ -2,7 +2,6 @@ import { LegendProps } from "recharts";
 
 const LegendContent = ({ payload }: LegendProps) => {
   if (!payload) return;
-  const totalRevenue = payload.reduce((acc, item) => acc + item.value, 0);
 
   return (
     <ul className="flex space-x-4">

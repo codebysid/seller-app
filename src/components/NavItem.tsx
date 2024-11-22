@@ -1,10 +1,15 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { NavItemType } from "../lib/constants";
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 
-const NavItem = ({ title, icon, id, route }: NavItemType) => {
+interface INavItem {
+  title: string;
+  icon: ReactNode;
+  route: string;
+}
+
+const NavItem = ({ title, icon, route }: INavItem) => {
   const { isCompactMode } = useSelector(
     (state: RootState) => state.isCompactMode
   );

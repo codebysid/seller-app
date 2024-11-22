@@ -7,7 +7,7 @@ import {
   updateSelectedCountry,
   updateSelectedCountryData,
 } from "../redux/slice/selectedCountry";
-import { filterCountry } from "../lib/helper";
+import { filterCountry, saveToLocalStorage } from "../lib/helper";
 
 const CountryDropDown = () => {
   const selectedCountry = useSelector(
@@ -22,21 +22,27 @@ const CountryDropDown = () => {
     dispatch(updateSelectedCountry({ title }));
     handleDropDownVisibility();
   };
+  console.log({ selectedCountry });
 
   useEffect(() => {
     const selectedCountryData = filterCountry(selectedCountry.title);
-    if (selectedCountry) {
+
+    if (
+      selectedCountryData?.title?.toLowerCase() !==
+      selectedCountry?.title?.toLocaleUpperCase()
+    ) {
       console.log({ selectedCountry });
       dispatch(
         updateSelectedCountryData({
           stats: selectedCountryData.stats,
           salesDataByRegion: selectedCountryData.salesDataByRegion,
           salesOverviewData: selectedCountryData.salesOverviewData,
-          title: selectedCountry.title,
+          title: selectedCountryData.title,
           registeredUserData: selectedCountryData.registeredUserData,
           integrations: selectedCountryData.integrations,
         })
       );
+      saveToLocalStorage(JSON.stringify(selectedCountryData));
     }
   }, [selectedCountry, dispatch]);
 
@@ -48,7 +54,7 @@ const CountryDropDown = () => {
       >
         <div className="flex flex-row items-center gap-2 z-30 ">
           {<Icons name={selectedCountry.title as IconName} />}
-          <p>{selectedCountry.title.toUpperCase()}</p>
+          <p>{selectedCountry.title?.toUpperCase()}</p>
         </div>
         <Icons name="dropDownIcon" />
       </div>

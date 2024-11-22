@@ -11,15 +11,17 @@ const Integrations = () => {
     <div className=" w-full bg-background border border-borderColor rounded-lg p-5 flex flex-col gap-7">
       <h1 className=" text-head-s">List of Integrations</h1>
       <table className="w-full ">
-        <tr className=" text-body-text text-textColor/60 text-left rounded-lg bg-blue/10 ">
-          <th className=" flex flex-row gap-6 items-baseline px-2 py-3">
-            <TableCheckBox />
-            <span>Application</span>
-          </th>
-          <th>Type</th>
-          <th>Rate</th>
-          <th>Profit</th>
-        </tr>
+        <thead>
+          <tr className=" text-body-text text-textColor/60 text-left rounded-lg bg-blue/10 ">
+            <th className=" flex flex-row gap-6 items-baseline px-2 py-3">
+              <TableCheckBox />
+              <span>Application</span>
+            </th>
+            <th>Type</th>
+            <th>Rate</th>
+            <th>Profit</th>
+          </tr>
+        </thead>
         {integrations &&
           integrations.map((ele) => {
             return (

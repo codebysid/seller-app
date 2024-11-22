@@ -12,7 +12,6 @@ const NavCategory = ({ items }: INavCategory) => {
           <NavItem
             key={navItem.id}
             title={navItem.title}
-            id={navItem.id}
             route={navItem.route}
             icon={navItem.icon}
           />
