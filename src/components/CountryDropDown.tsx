@@ -34,6 +34,7 @@ const CountryDropDown = () => {
           salesOverviewData: selectedCountryData.salesOverviewData,
           title: selectedCountry.title,
           registeredUserData: selectedCountryData.registeredUserData,
+          integrations: selectedCountryData.integrations,
         })
       );
     }

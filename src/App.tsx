@@ -6,6 +6,7 @@ import SalesOverview from "./components/graph/SalesOverview";
 import SalesRegion from "./components/graph/SalesRegion";
 import SalesOverviewChart from "./components/graph/SalesOverviewChart";
 import UserStatsOverview from "./components/graph/UserStatsOverview";
+import Integrations from "./components/Integrations";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
             <UserStatsOverview />
           </div>
           <div className=" col-span-2">
-            <SalesOverviewChart />
+            <Integrations />
           </div>
         </div>
       </div>

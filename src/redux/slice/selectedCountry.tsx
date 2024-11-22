@@ -10,6 +10,13 @@ interface IInitialState {
     premiumUsers: number;
     basicUsers: number;
   };
+  integrations: {
+    id: number;
+    title: string;
+    rate: string;
+    profit: string;
+    type: string;
+  }[];
 }
 
 const initialState: IInitialState = {
@@ -79,6 +86,29 @@ const initialState: IInitialState = {
     premiumUsers: 2804,
     basicUsers: 397,
   },
+  integrations: [
+    {
+      id: 1,
+      title: "Stripe",
+      type: "Finance",
+      rate: "33%",
+      profit: "10998.28",
+    },
+    {
+      id: 2,
+      title: "Zapier",
+      type: "CRM",
+      rate: "27%",
+      profit: "8998.59",
+    },
+    {
+      id: 3,
+      title: "Shopify",
+      type: "Marketplace",
+      rate: "40%",
+      profit: "13331.24",
+    },
+  ],
 };
 
 export const selectedCountrySlice = createSlice({
@@ -100,11 +130,13 @@ export const selectedCountrySlice = createSlice({
         salesDataByRegion,
         salesOverviewData,
         registeredUserData,
+        integrations,
       } = action.payload;
       if (stats) state.stats = stats;
       if (salesOverviewData) state.salesOverviewData = salesOverviewData;
       if (salesDataByRegion) state.salesDataByRegion = salesDataByRegion;
       if (registeredUserData) state.registeredUserData = registeredUserData;
+      if (integrations) state.integrations = integrations;
     },
   },
 });
