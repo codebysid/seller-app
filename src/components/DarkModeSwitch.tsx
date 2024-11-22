@@ -1,15 +1,20 @@
 import { useState } from "react";
 import Icons from "./Icons";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const DarkModeSwitch = () => {
+  const { isCompactMode } = useSelector(
+    (state: RootState) => state.isCompactMode
+  );
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleModeChange = () => {
     setIsChecked((prev) => !prev);
   };
   return (
-    <div className=" flex flex-row items-center gap-4 fixed bottom-4">
-      <p className=" text-body-text text-black-60">Dark</p>
+    <div className=" flex flex-row items-center gap-4 fixed bottom-4 w-max">
+      {!isCompactMode && <p className=" text-body-text text-black-60">Dark</p>}
       <label
         htmlFor="toggleObjective"
         className="flex items-center cursor-pointer select-none text-white"
@@ -32,7 +37,7 @@ const DarkModeSwitch = () => {
           <div className="absolute w-[20px] h-[20px] transition-all bg-[#ffffff] rounded-full top-[2px] left-[2px] peer-checked:left-[26px] "></div>
         </div>
       </label>
-      <p className=" text-body-text text-black-60">Light</p>
+      {!isCompactMode && <p className=" text-body-text text-black-60">Light</p>}
     </div>
   );
 };

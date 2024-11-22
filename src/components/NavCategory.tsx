@@ -6,7 +6,7 @@ interface INavCategory {
 }
 const NavCategory = ({ items }: INavCategory) => {
   return (
-    <div className=" flex flex-col gap-2">
+    <div className=" flex flex-col gap-2 w-max">
       {items.map((navItem) => {
         return (
           <NavItem
