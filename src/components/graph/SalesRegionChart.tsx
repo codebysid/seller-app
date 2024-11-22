@@ -22,13 +22,13 @@ const SalesRegionChart: React.FC = () => {
       className={" flex justify-center items-center"}
     >
       <RadarChart data={salesDataByRegion}>
-        <PolarGrid className=" fill-blue-8" />
+        <PolarGrid className=" fill-blue/8" />
         <PolarAngleAxis dataKey="region" className=" text-sbody-text" />
         <PolarRadiusAxis />
         <Radar
           dataKey="value"
           dot={{ r: 5, className: "fill-blue border-white" }}
-          className=" fill-blue-32 stroke-blue stroke-[1px]"
+          className=" fill-blue opacity-60 stroke-blue stroke-[1px]"
           label={<Label />}
         />
       </RadarChart>

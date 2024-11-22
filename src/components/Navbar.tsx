@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`min-h-screen border-r border-black-16 py-4 w-max ${
+      className={`min-h-screen border-r border-borderColor py-4 w-max ${
         isCompactMode ? `px-1` : `px-5`
       }`}
     >

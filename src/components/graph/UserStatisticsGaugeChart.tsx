@@ -11,9 +11,7 @@ interface ChartDataItem {
 }
 
 const UserStatsGauge = () => {
-  const selectedCountry = useSelector(
-    (state: RootState) => state.selectedCountry
-  );
+  const { selectedCountry, theme } = useSelector((state: RootState) => state);
 
   const [chartData, setChartData] = useState<ChartDataItem[]>();
   const { registeredUserData } = selectedCountry;
@@ -37,17 +35,21 @@ const UserStatsGauge = () => {
             dataKey="value"
           >
             <Cell className=" fill-blue" />
-            <Cell className=" fill-blue-60" />
+            <Cell className=" fill-blue/60" />
           </Pie>
         </PieChart>
       </ResponsiveContainer>
 
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center">
-        <Icons name="userGaugeLightIcon" />
+        {theme.dark ? (
+          <Icons name="userGaugeDarkIcon" />
+        ) : (
+          <Icons name="userGaugeLightIcon" />
+        )}
         <div className=" text-head-xl font-bold">
           {registeredUserData?.totalUsers?.toLocaleString()}
         </div>
-        <div className=" text-body-text text-black-60">Total users</div>
+        <div className=" text-body-text text-textColor/60">Total users</div>
       </div>
 
       <div className="flex justify-between w-full px-4 absolute bottom-0">

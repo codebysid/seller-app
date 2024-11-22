@@ -8,10 +8,10 @@ const Integrations = () => {
     (state: RootState) => state.selectedCountry
   );
   return (
-    <div className=" w-full bg-white border border-black-16 rounded-lg p-5 flex flex-col gap-7">
+    <div className=" w-full bg-background border border-borderColor rounded-lg p-5 flex flex-col gap-7">
       <h1 className=" text-head-s">List of Integrations</h1>
       <table className="w-full ">
-        <tr className=" text-body-text text-black-60 text-left rounded-lg bg-blue-8 ">
+        <tr className=" text-body-text text-textColor/60 text-left rounded-lg bg-blue/8 ">
           <th className=" flex flex-row gap-6 items-baseline px-2 py-3">
             <TableCheckBox />
             <span>Application</span>

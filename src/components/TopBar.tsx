@@ -9,11 +9,11 @@ const TopBar = () => {
   );
   return (
     <div
-      className={`h-[64px] border-b border-black-16 flex flex-row justify-between ${
+      className={`h-[64px] border-b border-borderColor flex flex-row justify-between ${
         isCompactMode ? `pl-20` : `pl-60`
-      } pr-10 items-center bg-white`}
+      } pr-10 items-center bg-background`}
     >
-      <h1 className=" text-head-l text-black">Dashboard</h1>
+      <h1 className=" text-head-l text-textColor">Dashboard</h1>
       <div className=" flex flex-row items-center gap-10">
         <CountryDropDown />
         <ProfilePicture />

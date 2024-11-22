@@ -1,3 +1,34 @@
+.light {
+  --background: 255, 255, 255;
+  --text-color: 0, 0, 0;
+
+  --green: 184, 233, 212;
+  --red: 253, 213, 218;
+
+  --yellow: 255, 215, 75;
+  --orange: 255, 158, 43;
+  --layout-bg: #696ffb0a;
+
+  --black: 0, 0, 0;
+  --blue: 105, 111, 251;
+  --border: 214, 214, 214;
+}
+
+.dark {
+  --background: 31, 33, 74;
+  --text-color: 255, 255, 255;
+
+  --green: 44, 196, 131;
+  --red: 255, 94, 117;
+
+  --yellow: 255, 215, 75;
+  --orange: 255, 158, 43;
+  --layout-bg: #434468;
+  --border: 31, 33, 74;
+  --black: 0, 0, 0;
+  --blue: 105, 111, 251;
+}
+
 .tooltip-container {
   @apply bg-black;
 }

@@ -9,7 +9,7 @@ interface IStatCard {
 
 const StatCard = ({ title, value, lastMonthChange }: IStatCard) => {
   return (
-    <div className="w-[20%] flex flex-col items-start gap-4 bg-white border border-black-16 rounded-lg p-4">
+    <div className="w-[20%] flex flex-col items-start gap-4 bg-background border border-borderColor rounded-lg p-4">
       <p className=" text-head-s">{title}</p>
       <p className=" text-head-xl">
         {isNaN(Number(value)) ? value : convertToDollar(Number(value))}

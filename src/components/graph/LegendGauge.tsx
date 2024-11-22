@@ -10,13 +10,13 @@ const LegendGauge = ({ value, label, direction }: LegendItemProps) => {
       <div className="rounded-full" />
       <div
         className={`relative text-body-text-bold after:absolute after:w-[4px] after:h-6  after:top-2 rounded-full ${
-          direction === "right" && ` after:-right-2 text-right after:bg-blue-60`
+          direction === "right" && ` after:-right-2 text-right after:bg-blue/60`
         }
         ${direction === "left" && ` after:-left-2 after:bg-blue`}
         `}
       >
         <div>{value?.toLocaleString()}</div>
-        <div className=" text-body-text text-black-60">{label}</div>
+        <div className=" text-body-text text-textColor/60">{label}</div>
       </div>
     </div>
   );

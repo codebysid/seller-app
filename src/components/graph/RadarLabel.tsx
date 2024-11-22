@@ -11,7 +11,7 @@ const Label = ({ cx, cy, x, y, value, angle }: LabelProps) => {
       y={labelY + 15}
       fontSize={20}
       fontWeight={700}
-      className="stroke-none fill-black"
+      className="stroke-none fill-textColor"
       textAnchor="middle"
       dominantBaseline="middle"
     >

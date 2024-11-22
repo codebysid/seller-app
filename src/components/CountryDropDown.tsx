@@ -48,7 +48,7 @@ const CountryDropDown = () => {
     <div className=" w-[178px]">
       <div
         onClick={handleDropDownVisibility}
-        className=" bg-black-16 flex flex-row items-center justify-between w-full h-[42px] rounded-full px-1 cursor-pointer"
+        className=" bg-black/10 flex flex-row items-center justify-between w-full h-[42px] rounded-full px-1 cursor-pointer"
       >
         <div className="flex flex-row items-center gap-2 z-30 ">
           {<Icons name={selectedCountry.title as IconName} />}
@@ -57,14 +57,14 @@ const CountryDropDown = () => {
         <Icons name="dropDownIcon" />
       </div>
 
-      <div className="absolute top-13 left-[83.2%] z-50 bg-black-16">
+      <div className="absolute top-13 left-[83.2%] z-50 bg-black/10">
         {isOpen &&
           countries.map((country) => {
             return (
               <div
                 key={country.id}
                 onClick={() => handleSelectedOption(country.title)}
-                className="cursor-pointer flex flex-row items-center w-[170px] p-2 hover:bg-white-60"
+                className="cursor-pointer flex flex-row items-center w-[170px] p-2 hover:bg-background/60"
               >
                 {country.flag}
                 <p>{country.title.toUpperCase()}</p>
