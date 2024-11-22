@@ -10,8 +10,6 @@
 
 ⭐ Dynamic Data rendering for countries
 
-⭐ You can save/copy it to your own library in Spotify as well
-
 ## Built with
 
     1. React.js
@@ -25,7 +23,7 @@
 
 ```
 > clone the repository
-> run: cd seller_app
+> run: cd into the directory
 > run: $ npm install
 > run: $ npm run dev
 > visit `http://localhost:5173`
