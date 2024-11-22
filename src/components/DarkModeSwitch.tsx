@@ -1,19 +1,14 @@
-import { useState } from "react";
 import Icons from "./Icons";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { toggleTheme } from "../redux/slice/theme";
-import { saveToLocalStorage } from "../lib/helper";
 
 const DarkModeSwitch = () => {
   const { isCompactMode, theme } = useSelector((state: RootState) => state);
   const dispatch = useDispatch();
-  const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleModeChange = () => {
-    setIsChecked((prev) => !prev);
     dispatch(toggleTheme());
-    saveToLocalStorage("darkMode", JSON.stringify({ dark: isChecked }));
   };
 
   return (

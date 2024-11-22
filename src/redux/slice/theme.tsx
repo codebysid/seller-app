@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getLocalStorage } from "../../lib/helper";
+import { getLocalStorage, saveToLocalStorage } from "../../lib/helper";
 
 interface ITheme {
   dark: boolean;
@@ -24,6 +24,7 @@ const theme = createSlice({
   reducers: {
     toggleTheme: (state) => {
       state.dark = !state.dark;
+      saveToLocalStorage("darkMode", JSON.stringify({ dark: state.dark }));
     },
   },
 });

@@ -619,8 +619,8 @@ export const iconsLib = {
           cy="17.5"
           r="17"
           fill="#696FFB"
-          fill-opacity="0.2"
-          shape-rendering="crispEdges"
+          fillOpacity="0.2"
+          shapeRendering="crispEdges"
         />
       </g>
       <rect
@@ -630,7 +630,7 @@ export const iconsLib = {
         height="28"
         rx="14"
         fill="white"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <path
         fillRule="evenodd"
@@ -646,9 +646,9 @@ export const iconsLib = {
           width="42"
           height="42"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -691,8 +691,8 @@ export const iconsLib = {
           cy="17.5"
           r="17"
           fill="#696FFB"
-          fill-opacity="0.2"
-          shape-rendering="crispEdges"
+          fillOpacity="0.2"
+          shapeRendering="crispEdges"
         />
       </g>
       <rect
@@ -702,7 +702,7 @@ export const iconsLib = {
         height="28"
         rx="14"
         fill="#696FFB"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <path
         fillRule="evenodd"
@@ -718,9 +718,9 @@ export const iconsLib = {
           width="42"
           height="42"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
